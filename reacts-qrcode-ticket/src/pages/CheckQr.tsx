@@ -1,28 +1,10 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
-import { WavyBackground } from "../ui/wavy-background";
-import { WobbleCard } from "../ui/wobble-card";
-import { BrowserMultiFormatReader } from "@zxing/library";
-import { gql, useLazyQuery } from "@apollo/client";
-import QRCode from "react-qr-code";
 
-const GET_EVENT_BY_QRCODE = gql`
-  query GetEventByQrcode($qrcode: String!) {
-    getEventByQrcode(qrcode: $qrcode) {
-      qrcode
-      firstName
-      lastName
-      email
-      eventName
-      eventDate
-      eventTime
-      venueAddress
-      ticketType
-      numberOfTickets
-      slogan
-    }
-  }
-`;
+import { useEffect, useRef, useState } from "react";
+import { WavyBackground } from "../components/ui/wavy-background";
+import { WobbleCard } from "../components/ui/wobble-card";
+import { BrowserMultiFormatReader } from "@zxing/library";
+import { useLazyQuery } from "@apollo/client";
+import { GET_EVENT_BY_QRCODE } from "../services/api";
 
 export function CheckQr() {
   const [result, setResult] = useState("No result");

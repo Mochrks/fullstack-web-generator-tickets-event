@@ -1,10 +1,10 @@
 "use client";
 
 // import { BackgroundBeams } from "../ui/background-beams";
-import React, { useEffect, useState } from "react";
-import { FormContent } from "./FormContent";
-import "../../App.css";
-import Loading from "./Loading";
+import { useEffect, useState } from "react";
+import { FormContent } from "../components/demo/FormContent";
+import "../App.css";
+import Loading from "../components/demo/Loading";
 
 export function FormInformation() {
   const [loading, setLoading] = useState(true);

@@ -1,5 +1,5 @@
 import _Routes from "./routes/_Router";
-import ApolloClientProvider from "./ApolloClient";
+import ApolloClientProvider from "./utils/ApolloClient";
 
 function App() {
   return (

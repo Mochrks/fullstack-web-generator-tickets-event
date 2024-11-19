@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { FormInformation } from "../components/demo/FormInformation";
-import { LandingPage } from "../components/demo/LandingPage";
-import { Ticket } from "../components/demo/Ticket";
-import { CheckQr } from "../components/demo/CheckQr";
+import { FormInformation } from "../pages/FormInformation";
+import { LandingPage } from "../pages/LandingPage";
+import { Ticket } from "../pages/Ticket";
+import { CheckQr } from "../pages/CheckQr";
 
 const _Routes: React.FC = () => {
   return (

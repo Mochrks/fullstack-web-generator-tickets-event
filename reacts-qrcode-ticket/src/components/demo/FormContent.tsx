@@ -1,8 +1,7 @@
-"use client";
 import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import { cn } from "../../utils/cn";
+import { cn } from "../../lib/cn";
 import { useNavigate } from "react-router-dom";
 import { gql, useMutation } from "@apollo/client";
 import Loading from "./Loading";

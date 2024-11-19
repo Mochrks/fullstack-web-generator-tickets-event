@@ -1,33 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { LampContainer } from "../ui/lamp";
+import { LampContainer } from "../components/ui/lamp";
 import QRCode from "react-qr-code";
 import html2canvas from "html2canvas";
-import { gql, useQuery } from "@apollo/client";
-import "./../../App.css";
-import Loading from "./Loading";
+import { useQuery } from "@apollo/client";
+import "../App.css";
+import Loading from "../components/demo/Loading";
+import { GET_LATEST_EVENT } from "../services/api";
 
-const GET_LATEST_EVENT = gql`
-  query GetLatestEvent {
-    getLatestEvent {
-      qrcode
-      firstName
-      lastName
-      email
-      eventName
-      eventDate
-      eventTime
-      venueAddress
-      ticketType
-      numberOfTickets
-      slogan
-      createdAt
-      updatedAt
-    }
-  }
-`;
 
 export function Ticket() {
   const [imageURL, setImageURL] = useState<string | null>(null);
